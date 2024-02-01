@@ -1,8 +1,8 @@
 package com.sixheroes.onedayheroapi.notification;
 
 import com.sixheroes.onedayheroapi.docs.RestDocsSupport;
-import com.sixheroes.onedayheroapplication.notification.NotificationService;
-import com.sixheroes.onedayheroapplication.notification.response.AlarmResponse;
+import com.sixheroes.onedayherocore.notification.application.NotificationService;
+import com.sixheroes.onedayherocore.notification.application.response.AlarmResponse;
 import com.sixheroes.onedayherocommon.converter.DateTimeConverter;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

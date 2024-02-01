@@ -1,8 +1,8 @@
 package com.sixheroes.onedayheroapi.user.request;
 
-import com.sixheroes.onedayheroapplication.user.request.UserBasicInfoServiceRequest;
-import com.sixheroes.onedayheroapplication.user.request.UserFavoriteWorkingDayServiceRequest;
-import com.sixheroes.onedayheroapplication.user.request.UserServiceUpdateRequest;
+import com.sixheroes.onedayherocore.user.application.request.UserBasicInfoServiceRequest;
+import com.sixheroes.onedayherocore.user.application.request.UserFavoriteWorkingDayServiceRequest;
+import com.sixheroes.onedayherocore.user.application.request.UserServiceUpdateRequest;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 

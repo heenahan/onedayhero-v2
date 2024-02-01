@@ -1,7 +1,7 @@
 package com.sixheroes.onedayheroapi.mission.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.sixheroes.onedayheroapplication.mission.request.MissionFindFilterServiceRequest;
+import com.sixheroes.onedayherocore.mission.application.request.MissionFindFilterServiceRequest;
 import lombok.Builder;
 
 import java.time.LocalDate;

@@ -1,6 +1,6 @@
 package com.sixheroes.onedayheroapi.main.request;
 
-import com.sixheroes.onedayheroapplication.main.request.UserPositionServiceRequest;
+import com.sixheroes.onedayherocore.main.application.request.UserPositionServiceRequest;
 import jakarta.validation.constraints.NotNull;
 import lombok.Builder;
 

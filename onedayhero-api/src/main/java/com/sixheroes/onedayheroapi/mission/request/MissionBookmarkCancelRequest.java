@@ -1,6 +1,6 @@
 package com.sixheroes.onedayheroapi.mission.request;
 
-import com.sixheroes.onedayheroapplication.mission.request.MissionBookmarkCancelServiceRequest;
+import com.sixheroes.onedayherocore.mission.application.request.MissionBookmarkCancelServiceRequest;
 import jakarta.validation.constraints.NotNull;
 
 public record MissionBookmarkCancelRequest(

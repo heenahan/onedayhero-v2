@@ -2,7 +2,7 @@ package com.sixheroes.onedayheroapi.mission;
 
 import com.sixheroes.onedayheroapi.global.argumentsresolver.authuser.AuthUser;
 import com.sixheroes.onedayheroapi.global.response.ApiResponse;
-import com.sixheroes.onedayheroapplication.mission.MissionImageService;
+import com.sixheroes.onedayherocore.mission.application.MissionImageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

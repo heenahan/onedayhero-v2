@@ -1,7 +1,7 @@
 package com.sixheroes.onedayheroapi.mission.request;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.sixheroes.onedayheroapplication.mission.request.MissionInfoServiceRequest;
+import com.sixheroes.onedayherocore.mission.application.request.MissionInfoServiceRequest;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Builder;

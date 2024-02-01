@@ -2,8 +2,8 @@ package com.sixheroes.onedayheroapi.notification;
 
 import com.sixheroes.onedayheroapi.global.argumentsresolver.authuser.AuthUser;
 import com.sixheroes.onedayheroapi.global.response.ApiResponse;
-import com.sixheroes.onedayheroapplication.notification.NotificationService;
-import com.sixheroes.onedayheroapplication.notification.response.AlarmResponse;
+import com.sixheroes.onedayherocore.notification.application.NotificationService;
+import com.sixheroes.onedayherocore.notification.application.response.AlarmResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Slice;

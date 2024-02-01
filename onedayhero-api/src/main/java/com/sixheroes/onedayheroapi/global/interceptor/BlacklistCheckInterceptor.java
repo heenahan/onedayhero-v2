@@ -1,8 +1,8 @@
 package com.sixheroes.onedayheroapi.global.interceptor;
 
-import com.sixheroes.onedayheroapplication.auth.BlacklistService;
 import com.sixheroes.onedayherocommon.error.ErrorCode;
 import com.sixheroes.onedayherocommon.exception.auth.InvalidAuthorizationException;
+import com.sixheroes.onedayherocore.auth.application.BlacklistService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;

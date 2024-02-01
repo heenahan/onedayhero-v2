@@ -1,14 +1,13 @@
 package com.sixheroes.onedayheroapi.jwt;
 
-import com.sixheroes.onedayheroapplication.global.jwt.JwtProperties;
-import com.sixheroes.onedayheroapplication.global.jwt.JwtTokenManager;
+import com.sixheroes.onedayheroapi.docs.JwtTestConfiguration;
+import com.sixheroes.onedayherocore.global.jwt.JwtProperties;
+import com.sixheroes.onedayherocore.global.jwt.JwtTokenManager;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.MalformedJwtException;
 import org.assertj.core.api.SoftAssertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-
-import java.util.Date;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;

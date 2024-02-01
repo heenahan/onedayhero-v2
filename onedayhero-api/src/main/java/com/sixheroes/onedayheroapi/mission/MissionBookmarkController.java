@@ -4,15 +4,13 @@ import com.sixheroes.onedayheroapi.global.argumentsresolver.authuser.AuthUser;
 import com.sixheroes.onedayheroapi.global.response.ApiResponse;
 import com.sixheroes.onedayheroapi.mission.request.MissionBookmarkCancelRequest;
 import com.sixheroes.onedayheroapi.mission.request.MissionBookmarkCreateRequest;
-import com.sixheroes.onedayheroapplication.mission.MissionBookmarkService;
-import com.sixheroes.onedayheroapplication.mission.response.MissionBookmarkResponse;
+import com.sixheroes.onedayherocore.mission.application.MissionBookmarkService;
+import com.sixheroes.onedayherocore.mission.application.response.MissionBookmarkResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.net.URI;
 
 @RequiredArgsConstructor
 @RequestMapping("/api/v1/bookmarks")

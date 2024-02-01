@@ -1,8 +1,8 @@
 package com.sixheroes.onedayheroapi.region;
 
 import com.sixheroes.onedayheroapi.global.response.ApiResponse;
-import com.sixheroes.onedayheroapplication.region.RegionService;
-import com.sixheroes.onedayheroapplication.region.response.AllRegionResponse;
+import com.sixheroes.onedayherocore.region.application.RegionService;
+import com.sixheroes.onedayherocore.region.application.response.AllRegionResponse;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

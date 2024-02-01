@@ -3,14 +3,14 @@ package com.sixheroes.onedayheroapi.review;
 import com.sixheroes.onedayheroapi.docs.RestDocsSupport;
 import com.sixheroes.onedayheroapi.review.request.ReviewCreateRequest;
 import com.sixheroes.onedayheroapi.review.request.ReviewUpdateRequest;
-import com.sixheroes.onedayheroapplication.review.ReviewService;
-import com.sixheroes.onedayheroapplication.review.reqeust.ReviewCreateServiceRequest;
-import com.sixheroes.onedayheroapplication.review.reqeust.ReviewUpdateServiceRequest;
-import com.sixheroes.onedayheroapplication.review.response.ReceivedReviewResponse;
-import com.sixheroes.onedayheroapplication.review.response.ReviewDetailResponse;
-import com.sixheroes.onedayheroapplication.review.response.ReviewImageResponse;
-import com.sixheroes.onedayheroapplication.review.response.ReviewResponse;
 import com.sixheroes.onedayherocommon.converter.DateTimeConverter;
+import com.sixheroes.onedayherocore.review.application.ReviewService;
+import com.sixheroes.onedayherocore.review.application.reqeust.ReviewCreateServiceRequest;
+import com.sixheroes.onedayherocore.review.application.reqeust.ReviewUpdateServiceRequest;
+import com.sixheroes.onedayherocore.review.application.response.ReceivedReviewResponse;
+import com.sixheroes.onedayherocore.review.application.response.ReviewDetailResponse;
+import com.sixheroes.onedayherocore.review.application.response.ReviewImageResponse;
+import com.sixheroes.onedayherocore.review.application.response.ReviewResponse;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -42,7 +42,6 @@ import static org.springframework.restdocs.request.RequestDocumentation.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.multipart;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
-
 
 @WebMvcTest(ReviewController.class)
 class ReviewControllerTest extends RestDocsSupport {

@@ -1,10 +1,10 @@
 package com.sixheroes.onedayheroapi.mission;
 
 import com.sixheroes.onedayheroapi.docs.RestDocsSupport;
-import com.sixheroes.onedayheroapplication.mission.MissionBookmarkService;
-import com.sixheroes.onedayheroapplication.mission.request.MissionBookmarkCancelServiceRequest;
-import com.sixheroes.onedayheroapplication.mission.request.MissionBookmarkCreateServiceRequest;
-import com.sixheroes.onedayheroapplication.mission.response.MissionBookmarkResponse;
+import com.sixheroes.onedayherocore.mission.application.MissionBookmarkService;
+import com.sixheroes.onedayherocore.mission.application.request.MissionBookmarkCancelServiceRequest;
+import com.sixheroes.onedayherocore.mission.application.request.MissionBookmarkCreateServiceRequest;
+import com.sixheroes.onedayherocore.mission.application.response.MissionBookmarkResponse;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -14,7 +14,6 @@ import org.springframework.http.MediaType;
 import org.springframework.restdocs.payload.JsonFieldType;
 import org.springframework.restdocs.snippet.Attributes;
 
-import static com.sixheroes.onedayheroapi.docs.DocumentFormatGenerator.*;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyLong;
 import static org.mockito.BDDMockito.given;

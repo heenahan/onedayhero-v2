@@ -1,6 +1,6 @@
 package com.sixheroes.onedayheroapi.mission.request;
 
-import com.sixheroes.onedayheroapplication.mission.request.MissionBookmarkCreateServiceRequest;
+import com.sixheroes.onedayherocore.mission.application.request.MissionBookmarkCreateServiceRequest;
 import jakarta.validation.constraints.NotNull;
 
 public record MissionBookmarkCreateRequest(

@@ -1,6 +1,6 @@
 package com.sixheroes.onedayheroapi.missionproposal.request;
 
-import com.sixheroes.onedayheroapplication.missionproposal.request.MissionProposalCreateServiceRequest;
+import com.sixheroes.onedayherocore.missionproposal.application.request.MissionProposalCreateServiceRequest;
 import jakarta.validation.constraints.NotNull;
 
 public record MissionProposalCreateRequest(

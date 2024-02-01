@@ -1,6 +1,6 @@
 package com.sixheroes.onedayheroapi.chatroom.request;
 
-import com.sixheroes.onedayheroapplication.chatroom.request.CreateMissionChatRoomServiceRequest;
+import com.sixheroes.onedayherocore.missionchatroom.application.request.CreateMissionChatRoomServiceRequest;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import lombok.Builder;

@@ -1,6 +1,6 @@
 package com.sixheroes.onedayheroapi.missionmatch.request;
 
-import com.sixheroes.onedayheroapplication.missionmatch.request.MissionMatchCancelServiceRequest;
+import com.sixheroes.onedayherocore.missionmatch.application.request.MissionMatchCancelServiceRequest;
 import jakarta.validation.constraints.NotNull;
 
 public record MissionMatchCancelRequest(

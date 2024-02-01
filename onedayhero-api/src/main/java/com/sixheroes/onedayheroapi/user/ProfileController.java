@@ -2,12 +2,12 @@ package com.sixheroes.onedayheroapi.user;
 
 import com.sixheroes.onedayheroapi.global.response.ApiResponse;
 import com.sixheroes.onedayheroapi.user.request.HeroRankRequest;
-import com.sixheroes.onedayheroapplication.user.ProfileService;
-import com.sixheroes.onedayheroapplication.user.request.HeroRankServiceRequest;
-import com.sixheroes.onedayheroapplication.user.response.HeroRankResponse;
-import com.sixheroes.onedayheroapplication.user.response.HeroSearchResponse;
-import com.sixheroes.onedayheroapplication.user.response.ProfileCitizenResponse;
-import com.sixheroes.onedayheroapplication.user.response.ProfileHeroResponse;
+import com.sixheroes.onedayherocore.user.application.ProfileService;
+import com.sixheroes.onedayherocore.user.application.request.HeroRankServiceRequest;
+import com.sixheroes.onedayherocore.user.application.response.HeroRankResponse;
+import com.sixheroes.onedayherocore.user.application.response.HeroSearchResponse;
+import com.sixheroes.onedayherocore.user.application.response.ProfileCitizenResponse;
+import com.sixheroes.onedayherocore.user.application.response.ProfileHeroResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Pageable;

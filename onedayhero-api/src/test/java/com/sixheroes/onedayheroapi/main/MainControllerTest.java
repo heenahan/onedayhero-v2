@@ -2,12 +2,12 @@ package com.sixheroes.onedayheroapi.main;
 
 import com.sixheroes.onedayheroapi.docs.RestDocsSupport;
 import com.sixheroes.onedayheroapi.main.request.UserPositionRequest;
-import com.sixheroes.onedayheroapplication.main.MainService;
-import com.sixheroes.onedayheroapplication.main.request.UserPositionServiceRequest;
-import com.sixheroes.onedayheroapplication.main.response.MainResponse;
-import com.sixheroes.onedayheroapplication.main.response.MissionSoonExpiredResponse;
-import com.sixheroes.onedayheroapplication.mission.response.MissionCategoryResponse;
-import com.sixheroes.onedayheroapplication.region.response.RegionResponse;
+import com.sixheroes.onedayherocore.main.application.MainService;
+import com.sixheroes.onedayherocore.main.application.request.UserPositionServiceRequest;
+import com.sixheroes.onedayherocore.main.application.response.MainResponse;
+import com.sixheroes.onedayherocore.main.application.response.MissionSoonExpiredResponse;
+import com.sixheroes.onedayherocore.mission.application.response.MissionCategoryResponse;
+import com.sixheroes.onedayherocore.region.application.response.RegionResponse;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;

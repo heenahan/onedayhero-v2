@@ -1,8 +1,8 @@
 package com.sixheroes.onedayheroapi.global.s3;
 
-import com.sixheroes.onedayheroapplication.global.s3.dto.request.S3ImageUploadServiceRequest;
 import com.sixheroes.onedayherocommon.error.ErrorCode;
 import com.sixheroes.onedayherocommon.exception.BusinessException;
+import com.sixheroes.onedayherocore.global.s3.dto.request.S3ImageUploadServiceRequest;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.springframework.web.multipart.MultipartFile;
