@@ -2,11 +2,11 @@ package com.sixheroes.onedayheroapi.missionproposal;
 
 import com.sixheroes.onedayheroapi.docs.RestDocsSupport;
 import com.sixheroes.onedayheroapi.missionproposal.request.MissionProposalCreateRequest;
-import com.sixheroes.onedayheroapplication.missionproposal.MissionProposalService;
-import com.sixheroes.onedayheroapplication.missionproposal.request.MissionProposalCreateServiceRequest;
-import com.sixheroes.onedayheroapplication.missionproposal.response.MissionProposalIdResponse;
-import com.sixheroes.onedayheroapplication.missionproposal.response.dto.*;
 import com.sixheroes.onedayherocommon.converter.DateTimeConverter;
+import com.sixheroes.onedayherocore.missionproposal.application.MissionProposalService;
+import com.sixheroes.onedayherocore.missionproposal.application.request.MissionProposalCreateServiceRequest;
+import com.sixheroes.onedayherocore.missionproposal.application.response.MissionProposalIdResponse;
+import com.sixheroes.onedayherocore.missionproposal.application.response.dto.*;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;

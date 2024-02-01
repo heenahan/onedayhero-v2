@@ -1,10 +1,10 @@
 package com.sixheroes.onedayheroapi.missionmatch;
 
 import com.sixheroes.onedayheroapi.docs.RestDocsSupport;
-import com.sixheroes.onedayheroapplication.missionmatch.MissionMatchService;
-import com.sixheroes.onedayheroapplication.missionmatch.request.MissionMatchCreateServiceRequest;
-import com.sixheroes.onedayheroapplication.missionmatch.request.MissionMatchCancelServiceRequest;
-import com.sixheroes.onedayheroapplication.missionmatch.response.MissionMatchResponse;
+import com.sixheroes.onedayherocore.missionmatch.application.MissionMatchService;
+import com.sixheroes.onedayherocore.missionmatch.application.request.MissionMatchCreateServiceRequest;
+import com.sixheroes.onedayherocore.missionmatch.application.request.MissionMatchCancelServiceRequest;
+import com.sixheroes.onedayherocore.missionmatch.application.response.MissionMatchResponse;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;

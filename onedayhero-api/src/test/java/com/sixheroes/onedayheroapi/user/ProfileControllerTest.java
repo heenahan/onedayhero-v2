@@ -1,10 +1,10 @@
 package com.sixheroes.onedayheroapi.user;
 
 import com.sixheroes.onedayheroapi.docs.RestDocsSupport;
-import com.sixheroes.onedayheroapplication.region.response.RegionResponse;
-import com.sixheroes.onedayheroapplication.user.ProfileService;
-import com.sixheroes.onedayheroapplication.user.request.HeroRankServiceRequest;
-import com.sixheroes.onedayheroapplication.user.response.*;
+import com.sixheroes.onedayherocore.region.application.response.RegionResponse;
+import com.sixheroes.onedayherocore.user.application.ProfileService;
+import com.sixheroes.onedayherocore.user.application.request.HeroRankServiceRequest;
+import com.sixheroes.onedayherocore.user.application.response.*;
 import com.sixheroes.onedayherocommon.converter.DateTimeConverter;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;

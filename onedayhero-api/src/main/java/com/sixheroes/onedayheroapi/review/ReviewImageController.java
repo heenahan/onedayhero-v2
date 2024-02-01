@@ -3,7 +3,7 @@ package com.sixheroes.onedayheroapi.review;
 
 import com.sixheroes.onedayheroapi.global.argumentsresolver.authuser.AuthUser;
 import com.sixheroes.onedayheroapi.global.response.ApiResponse;
-import com.sixheroes.onedayheroapplication.review.ReviewImageService;
+import com.sixheroes.onedayherocore.review.application.ReviewImageService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

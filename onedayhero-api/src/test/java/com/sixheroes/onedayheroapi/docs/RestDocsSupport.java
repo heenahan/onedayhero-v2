@@ -2,11 +2,12 @@ package com.sixheroes.onedayheroapi.docs;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
+import com.sixheroes.onedayheroapi.docs.JwtTestConfiguration;
 import com.sixheroes.onedayheroapi.global.argumentsresolver.authuser.AuthUserArgumentResolver;
 import com.sixheroes.onedayheroapi.global.handler.GlobalExceptionHandler;
 import com.sixheroes.onedayheroapi.global.interceptor.JwtAuthInterceptor;
-import com.sixheroes.onedayheroapplication.global.jwt.JwtProperties;
-import com.sixheroes.onedayheroapplication.global.jwt.JwtTokenManager;
+import com.sixheroes.onedayherocore.global.jwt.JwtProperties;
+import com.sixheroes.onedayherocore.global.jwt.JwtTokenManager;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,10 +29,10 @@ import static org.springframework.restdocs.operation.preprocess.Preprocessors.pr
 public abstract class RestDocsSupport {
 
     @Autowired
-    private JwtProperties jwtProperties;
+    private JwtProperties testJwtProperties;
 
     @Autowired
-    private JwtTokenManager jwtTokenManager;
+    private JwtTokenManager testJwtTokenManager;
 
     protected MockMvc mockMvc;
     protected ObjectMapper objectMapper = new ObjectMapper().registerModule(new JavaTimeModule());
@@ -45,7 +46,7 @@ public abstract class RestDocsSupport {
                         .operationPreprocessors()
                         .withRequestDefaults(prettyPrint())
                         .withResponseDefaults(prettyPrint()))
-                .setCustomArgumentResolvers(new PageableHandlerMethodArgumentResolver(), new AuthUserArgumentResolver(jwtProperties))
+                .setCustomArgumentResolvers(new PageableHandlerMethodArgumentResolver(), new AuthUserArgumentResolver(testJwtProperties))
                 .addMappedInterceptors(new String[]{
                         "/api/v1/alarms/**",
                         "/api/v1/sse/**",
@@ -65,13 +66,13 @@ public abstract class RestDocsSupport {
                         "/api/v1/main",
                         "/api/v1/mission-images/**",
                         "/api/v1/review-images/**",
-                }, new JwtAuthInterceptor(jwtProperties, jwtTokenManager))
+                }, new JwtAuthInterceptor(testJwtProperties, testJwtTokenManager))
                 .build();
     }
 
     protected abstract Object setController();
 
     protected String getAccessToken() {
-        return "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicm9sZSI6Ik1FTUJFUiIsImlhdCI6MTY5OTk0MDA5NiwiZXhwIjoxNzU5OTQwMDk2fQ.7xyZyQIzbkp-FLxNOLXpSI3Yg0CZ8tAJvlHrgATzZB4";
+        return "Bearer eyJhbGciOiJIUzI1NiJ9.eyJpZCI6MSwicm9sZSI6Ik1FTUJFUiIsImlhdCI6MTcwNjc3NTQ1MiwiZXhwIjoxNzY2Nzc1NDUyfQ.ZYrz4_2FUy9sDETyZOnRuk57UF29JUAX_sY8Evz1eKU";
     }
 }

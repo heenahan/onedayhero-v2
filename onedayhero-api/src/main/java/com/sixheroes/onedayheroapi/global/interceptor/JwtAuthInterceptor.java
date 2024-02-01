@@ -1,10 +1,10 @@
 package com.sixheroes.onedayheroapi.global.interceptor;
 
-import com.sixheroes.onedayheroapplication.global.jwt.JwtProperties;
-import com.sixheroes.onedayheroapplication.global.jwt.JwtTokenManager;
 import com.sixheroes.onedayherocommon.error.ErrorCode;
 import com.sixheroes.onedayherocommon.exception.auth.ExpiredTokenException;
 import com.sixheroes.onedayherocommon.exception.auth.InvalidAuthorizationException;
+import com.sixheroes.onedayherocore.global.jwt.JwtProperties;
+import com.sixheroes.onedayherocore.global.jwt.JwtTokenManager;
 import io.jsonwebtoken.ExpiredJwtException;
 import io.jsonwebtoken.JwtException;
 import jakarta.servlet.http.HttpServletRequest;

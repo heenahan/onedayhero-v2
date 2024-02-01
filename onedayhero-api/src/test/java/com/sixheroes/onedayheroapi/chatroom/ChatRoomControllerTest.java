@@ -2,13 +2,13 @@ package com.sixheroes.onedayheroapi.chatroom;
 
 import com.sixheroes.onedayheroapi.chatroom.request.CreateMissionChatRoomRequest;
 import com.sixheroes.onedayheroapi.docs.RestDocsSupport;
-import com.sixheroes.onedayheroapplication.chatroom.ChatRoomService;
-import com.sixheroes.onedayheroapplication.chatroom.request.CreateMissionChatRoomServiceRequest;
-import com.sixheroes.onedayheroapplication.chatroom.response.MissionChatRoomCreateResponse;
-import com.sixheroes.onedayheroapplication.chatroom.response.MissionChatRoomExitResponse;
-import com.sixheroes.onedayheroapplication.chatroom.response.MissionChatRoomFindResponse;
-import com.sixheroes.onedayherochat.application.ChatService;
-import com.sixheroes.onedayherochat.application.response.ChatMessageApiResponse;
+import com.sixheroes.onedayherocore.missionchatroom.application.ChatRoomService;
+import com.sixheroes.onedayherocore.missionchatroom.application.ChatService;
+import com.sixheroes.onedayherocore.missionchatroom.application.request.CreateMissionChatRoomServiceRequest;
+import com.sixheroes.onedayherocore.missionchatroom.application.response.ChatMessageApiResponse;
+import com.sixheroes.onedayherocore.missionchatroom.application.response.MissionChatRoomCreateResponse;
+import com.sixheroes.onedayherocore.missionchatroom.application.response.MissionChatRoomExitResponse;
+import com.sixheroes.onedayherocore.missionchatroom.application.response.MissionChatRoomFindResponse;
 import com.sixheroes.onedayherocommon.converter.DateTimeConverter;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -38,7 +38,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
 @WebMvcTest(ChatRoomController.class)
-public class ChatRoomControllerTest extends RestDocsSupport {
+class ChatRoomControllerTest extends RestDocsSupport {
 
     @MockBean
     private ChatRoomService chatRoomService;

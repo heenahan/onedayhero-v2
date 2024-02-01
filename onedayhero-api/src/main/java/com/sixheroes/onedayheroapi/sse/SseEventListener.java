@@ -1,6 +1,6 @@
 package com.sixheroes.onedayheroapi.sse;
 
-import com.sixheroes.onedayheroapplication.notification.dto.SsePayload;
+import com.sixheroes.onedayherocore.notification.application.dto.SsePayload;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;

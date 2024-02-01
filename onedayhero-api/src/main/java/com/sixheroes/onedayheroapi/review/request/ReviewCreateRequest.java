@@ -1,6 +1,6 @@
 package com.sixheroes.onedayheroapi.review.request;
 
-import com.sixheroes.onedayheroapplication.review.reqeust.ReviewCreateServiceRequest;
+import com.sixheroes.onedayherocore.review.application.reqeust.ReviewCreateServiceRequest;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.Builder;

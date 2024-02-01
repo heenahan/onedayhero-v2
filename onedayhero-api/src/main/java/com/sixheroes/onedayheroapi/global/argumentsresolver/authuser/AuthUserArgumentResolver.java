@@ -1,8 +1,8 @@
 package com.sixheroes.onedayheroapi.global.argumentsresolver.authuser;
 
-import com.sixheroes.onedayheroapplication.global.jwt.JwtProperties;
 import com.sixheroes.onedayherocommon.error.ErrorCode;
 import com.sixheroes.onedayherocommon.exception.auth.InvalidAuthorizationException;
+import com.sixheroes.onedayherocore.global.jwt.JwtProperties;
 import jakarta.servlet.http.HttpServletRequest;
 import lombok.RequiredArgsConstructor;
 import org.springframework.core.MethodParameter;

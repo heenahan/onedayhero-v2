@@ -1,7 +1,7 @@
 package com.sixheroes.onedayheroapi.mission.request;
 
 import com.sixheroes.onedayheroapi.global.s3.MultipartFileMapper;
-import com.sixheroes.onedayheroapplication.mission.request.MissionCreateServiceRequest;
+import com.sixheroes.onedayherocore.mission.application.request.MissionCreateServiceRequest;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotNull;
 import lombok.Builder;

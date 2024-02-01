@@ -2,7 +2,7 @@ package com.sixheroes.onedayheroapi.reviewimage;
 
 import com.sixheroes.onedayheroapi.docs.RestDocsSupport;
 import com.sixheroes.onedayheroapi.review.ReviewImageController;
-import com.sixheroes.onedayheroapplication.review.ReviewImageService;
+import com.sixheroes.onedayherocore.review.application.ReviewImageService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;

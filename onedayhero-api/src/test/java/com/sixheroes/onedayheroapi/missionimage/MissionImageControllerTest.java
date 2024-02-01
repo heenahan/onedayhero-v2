@@ -2,7 +2,7 @@ package com.sixheroes.onedayheroapi.missionimage;
 
 import com.sixheroes.onedayheroapi.docs.RestDocsSupport;
 import com.sixheroes.onedayheroapi.mission.MissionImageController;
-import com.sixheroes.onedayheroapplication.mission.MissionImageService;
+import com.sixheroes.onedayherocore.mission.application.MissionImageService;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
