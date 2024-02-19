@@ -28,7 +28,7 @@ import java.util.Objects;
 @DynamicUpdate
 @SQLDelete(sql = "UPDATE missions SET is_deleted = true WHERE id = ?")
 @Where(clause = "is_deleted = false")
-@Table(name = "missions")
+@Table(name = "missions", indexes = @Index(name = "idx_missions_mission_date_desc", columnList = "is_deleted, citizen_id, status, mission_date desc"))
 @Entity
 public class Mission extends BaseEntity {
 

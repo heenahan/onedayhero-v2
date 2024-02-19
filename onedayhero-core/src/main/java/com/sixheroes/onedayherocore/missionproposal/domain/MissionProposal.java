@@ -15,10 +15,13 @@ import lombok.extern.slf4j.Slf4j;
 @Getter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Table(name = "mission_proposals",
-        uniqueConstraints = {
-                // TODO 제약조건 위반 막기
-                @UniqueConstraint(columnNames = {"mission_id", "hero_id"})
-        }
+    uniqueConstraints = {
+            // TODO 제약조건 위반 막기
+            @UniqueConstraint(columnNames = {"mission_id", "hero_id"})
+    },
+    indexes = {
+        @Index(name = "idx_mission_proposals", columnList = "hero_id")
+    }
 )
 @Entity
 public class MissionProposal extends BaseEntity {
