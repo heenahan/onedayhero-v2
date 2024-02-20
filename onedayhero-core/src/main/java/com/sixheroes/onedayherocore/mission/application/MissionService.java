@@ -72,11 +72,11 @@ public class MissionService {
         var imageResponse = s3ImageUploadService.uploadImages(request.imageFiles(), directoryProperties.getMissionDir());
 
         var missionImages = imageResponse.stream()
-                .map(MissionImageMapper::createMissionImage)
+                .map(s3 -> MissionImageMapper.createMissionImage(mission, s3))
                 .toList();
 
-        mission.addMissionImages(missionImages);
         var savedMission = missionRepository.save(mission);
+        missionImageRepository.saveAll(missionImages);
 
         return MissionIdResponse.from(savedMission.getId());
     }
@@ -138,10 +138,10 @@ public class MissionService {
 
         var imageResponse = s3ImageUploadService.uploadImages(request.imageFiles(), directoryProperties.getMissionDir());
         var missionImages = imageResponse.stream()
-                .map(MissionImageMapper::createMissionImage)
+                .map(s3 -> MissionImageMapper.createMissionImage(mission, s3))
                 .toList();
 
-        mission.addMissionImages(missionImages);
+        missionImageRepository.saveAll(missionImages);
 
         return MissionIdResponse.from(mission.getId());
     }

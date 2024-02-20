@@ -54,14 +54,16 @@ public class MissionImage extends BaseEntity {
     }
 
     public static MissionImage createMissionImage(
-            String originalName,
-            String uniqueName,
-            String path
+        Mission mission,
+        String originalName,
+        String uniqueName,
+        String path
     ) {
         return MissionImage.builder()
-                .originalName(originalName)
-                .uniqueName(uniqueName)
-                .path(path)
-                .build();
+            .mission(mission)
+            .originalName(originalName)
+            .uniqueName(uniqueName)
+            .path(path)
+            .build();
     }
 }

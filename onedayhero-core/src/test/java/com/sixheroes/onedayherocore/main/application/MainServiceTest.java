@@ -60,7 +60,12 @@ class MainServiceTest extends IntegrationApplicationTest {
         given(missionNativeQueryRepository.findSoonExpiredMissionByLocation(any(String.class), any(Integer.class), any(Long.class), any(LocalDateTime.class), any(LocalDateTime.class)))
                 .willReturn(queryResponse);
 
-        var imageResult = MissionImage.createMissionImage("image.jpeg", "sadsifusdfjkd.jpeg", "s3://path");
+        var imageResult = MissionImage.builder()
+            .originalName("originalName")
+            .uniqueName("uniqueName")
+            .path("s3://")
+            .build();
+        missionImageRepository.save(imageResult);
 
         given(missionImageRepository.findByMission_Id(any(Long.class)))
                 .willReturn(List.of(imageResult));

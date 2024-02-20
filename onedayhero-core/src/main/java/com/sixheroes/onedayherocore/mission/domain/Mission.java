@@ -62,9 +62,6 @@ public class Mission extends BaseEntity {
     @Column(name = "status", length = 20, nullable = false)
     private MissionStatus missionStatus;
 
-    @OneToMany(mappedBy = "mission", cascade = CascadeType.ALL)
-    List<MissionImage> missionImages = new ArrayList<>();
-
     @Column(name = "is_deleted", nullable = false)
     private Boolean isDeleted;
 
@@ -114,15 +111,6 @@ public class Mission extends BaseEntity {
                 .bookmarkCount(0)
                 .missionStatus(MissionStatus.MATCHING)
                 .build();
-    }
-
-    public void addMissionImages(
-            List<MissionImage> missionImages
-    ) {
-        missionImages.forEach(missionImage -> {
-            missionImage.setMission(this);
-            this.missionImages.add(missionImage);
-        });
     }
 
     public void update(

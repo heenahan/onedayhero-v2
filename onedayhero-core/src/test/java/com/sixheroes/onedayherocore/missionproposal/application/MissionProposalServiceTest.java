@@ -279,9 +279,7 @@ class MissionProposalServiceTest extends IntegrationApplicationTest {
     private MissionImage createMissionImage(
             Mission mission
     ) {
-        var missionImage = MissionImage.createMissionImage("원본 이름", "고유 이름", "s3://image");
-        mission.addMissionImages(List.of(missionImage));
-        return missionImage;
+        return MissionImage.createMissionImage(mission, "원본 이름", "고유 이름", "s3://image");
     }
 
     private Mission createMission(

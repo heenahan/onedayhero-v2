@@ -13,7 +13,7 @@ import java.time.LocalTime;
 import java.util.List;
 
 @Transactional
-public class MissionImageServiceTest extends IntegrationApplicationTest {
+class MissionImageServiceTest extends IntegrationApplicationTest {
 
     @DisplayName("미션의 개별 이미지를 삭제 할 수 있다.")
     @Test
@@ -61,8 +61,8 @@ public class MissionImageServiceTest extends IntegrationApplicationTest {
                 .mission(mission)
                 .build();
 
-        mission.addMissionImages(List.of(missionImage));
         var savedMission = missionRepository.save(mission);
+        missionImageRepository.save(missionImage);
 
         // when
         var missionImages = missionImageRepository.findByMission_Id(savedMission.getId());
