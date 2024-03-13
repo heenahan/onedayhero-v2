@@ -1,6 +1,7 @@
 package com.sixheroes.onedayheroapi.sse;
 
 import com.sixheroes.onedayheroapi.docs.RestDocsSupport;
+import com.sixheroes.onedayherocore.notification.application.SseEmitters;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;

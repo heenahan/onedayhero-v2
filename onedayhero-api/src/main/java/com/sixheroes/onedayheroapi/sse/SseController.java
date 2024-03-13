@@ -1,6 +1,7 @@
 package com.sixheroes.onedayheroapi.sse;
 
 import com.sixheroes.onedayheroapi.global.argumentsresolver.authuser.AuthUser;
+import com.sixheroes.onedayherocore.notification.application.SseEmitters;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

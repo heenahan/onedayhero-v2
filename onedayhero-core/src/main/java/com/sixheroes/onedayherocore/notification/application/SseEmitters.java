@@ -1,4 +1,4 @@
-package com.sixheroes.onedayheroapi.sse;
+package com.sixheroes.onedayherocore.notification.application;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
