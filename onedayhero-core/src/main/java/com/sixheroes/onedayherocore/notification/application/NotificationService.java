@@ -1,5 +1,6 @@
 package com.sixheroes.onedayherocore.notification.application;
 
+import com.sixheroes.onedayherocommon.converter.StringConverter;
 import com.sixheroes.onedayherocore.notification.application.dto.AlarmPayload;
 import com.sixheroes.onedayherocore.notification.application.dto.SsePayload;
 import com.sixheroes.onedayherocore.notification.application.response.AlarmResponse;
@@ -10,6 +11,7 @@ import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Slice;
 import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
 @Slf4j
 @RequiredArgsConstructor
@@ -22,7 +24,7 @@ public class NotificationService {
 
     private final AlarmReader alarmReader;
 
-    private final ApplicationEventPublisher applicationEventPublisher;
+    private final SseEmitters sseEmitters;
 
     public void notifyClient(
         AlarmPayload alarmPayload
@@ -33,7 +35,9 @@ public class NotificationService {
         var alarm = alarmPayload.toEntity(alarmTemplate);
         alarmRepository.save(alarm);
 
-        applicationEventPublisher.publishEvent(SsePayload.of(alarmType, alarm));
+        var content = StringConverter.convertMapToString(alarmPayload.data(), alarm.getContent());
+        var data = new Data(alarm.getTitle(), content);
+        sseEmitters.send(alarmPayload.userId(), data);
     }
 
     public Slice<AlarmResponse> findAlarm(
@@ -55,4 +59,9 @@ public class NotificationService {
 
         alarmRepository.delete(alarm);
     }
+
+    static record Data(
+        String title,
+        String content
+    ) {}
 }
