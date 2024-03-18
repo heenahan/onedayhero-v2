@@ -24,9 +24,12 @@ public class Events extends BaseEntity {
     @Enumerated(EnumType.STRING)
     private EventType eventType;
 
-    @Convert(converter = EventDataConverter.class)
-    @Column(name = "data", length = 255, nullable = false)
-    private Object eventData;
+    @Column(name = "entity_type", length = 30, nullable = false)
+    @Enumerated(EnumType.STRING)
+    private EntityType entityType;
+
+    @Column(name = "entity_data", length = 255, nullable = false)
+    private String entityData;
 
     @Column(name = "success", nullable = false)
     private Boolean success = Boolean.FALSE;
@@ -34,10 +37,16 @@ public class Events extends BaseEntity {
     @Builder
     private Events(
         EventType eventType,
-        Object eventData
+        EntityType entityType
     ) {
         this.eventType = eventType;
-        this.eventData = eventData;
+        this.entityType = entityType;
+    }
+
+    public void updateEntityData(
+        String entityData
+    ) {
+        this.entityData = entityData;
     }
 
     public void changeSuccess() {

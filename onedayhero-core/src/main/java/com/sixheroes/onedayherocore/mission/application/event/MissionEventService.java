@@ -1,5 +1,7 @@
 package com.sixheroes.onedayherocore.mission.application.event;
 
+import com.sixheroes.onedayherocore.event.domain.EntityType;
+import com.sixheroes.onedayherocore.event.domain.EventService;
 import com.sixheroes.onedayherocore.event.domain.EventType;
 import com.sixheroes.onedayherocore.event.domain.Events;
 import com.sixheroes.onedayherocore.event.domain.repository.EventRepository;
@@ -34,6 +36,7 @@ public class MissionEventService {
 
     private final MissionReader missionReader;
     private final NotificationService notificationService;
+    private final EventService eventService;
     private final EventRepository eventRepository;
 
     @Async
@@ -49,12 +52,13 @@ public class MissionEventService {
          .thenApply(alarmPayload -> {
              var events = Events.builder()
                  .eventType(EventType.ALARM)
-                 .eventData(alarmPayload)
+                 .entityType(EntityType.ALARM_PAYLOAD)
                  .build();
+             eventService.convertObjectToString(events, alarmPayload);
 
              return eventRepository.save(events); })
          .thenApply(events -> {
-                 var alarmPayload = (AlarmPayload) events.getEventData();
+                 var alarmPayload = (AlarmPayload) eventService.convertStringToObject(events);
                  notificationService.notifyClient(alarmPayload);
 
                  return events; })
