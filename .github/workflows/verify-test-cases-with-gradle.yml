@@ -10,7 +10,7 @@ name: Verify Test Cases with Gradle
 on:
   pull_request:
     branches: 
-      - "**"
+      - '**'
     paths:
       - '**.java'
       - '**/build.gradle*'
