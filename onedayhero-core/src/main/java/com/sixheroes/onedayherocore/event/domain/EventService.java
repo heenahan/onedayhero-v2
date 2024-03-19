@@ -24,13 +24,13 @@ public class EventService<T> {
         }
     }
 
-    public Object convertStringToObject(
+    public T convertStringToObject(
         Events events
     ) {
         var entityData = events.getEntityData();
         var entityType = events.getEntityType();
         try {
-            return objectMapper.readValue(entityData, entityType.getName());
+            return (T) objectMapper.readValue(entityData, entityType.getName());
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }

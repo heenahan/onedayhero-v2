@@ -36,7 +36,7 @@ public class MissionEventService {
 
     private final MissionReader missionReader;
     private final NotificationService notificationService;
-    private final EventService eventService;
+    private final EventService<AlarmPayload> eventService;
     private final EventRepository eventRepository;
 
     @Async
@@ -58,10 +58,10 @@ public class MissionEventService {
 
              return eventRepository.save(events); })
          .thenApply(events -> {
-                 var alarmPayload = (AlarmPayload) eventService.convertStringToObject(events);
-                 notificationService.notifyClient(alarmPayload);
+             var alarmPayload = eventService.convertStringToObject(events);
+             notificationService.notifyClient(alarmPayload);
 
-                 return events; })
+             return events; })
          .thenAccept(events -> {
              events.changeSuccess();
              eventRepository.save(events); });

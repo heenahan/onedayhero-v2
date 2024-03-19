@@ -24,7 +24,9 @@ public class QEvents extends EntityPathBase<Events> {
     //inherited
     public final DateTimePath<java.time.LocalDateTime> createdAt = _super.createdAt;
 
-    public final SimplePath<Object> eventData = createSimple("eventData", Object.class);
+    public final StringPath entityData = createString("entityData");
+
+    public final EnumPath<EntityType> entityType = createEnum("entityType", EntityType.class);
 
     public final EnumPath<EventType> eventType = createEnum("eventType", EventType.class);
 
